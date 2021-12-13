@@ -4,7 +4,9 @@ var jwt = require("jsonwebtoken");
 var expressJwt = require("express-jwt");
 
 exports.signup = (req, res) => {
+  console.log(req.body);
   const errors = validationResult(req);
+
 
   if (!errors.isEmpty()) {
     return res.status(422).json({
